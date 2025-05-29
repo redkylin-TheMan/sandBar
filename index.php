@@ -326,7 +326,7 @@ include 'php/databases_link.php';
       <div class="container">
         <div class="row row-50 justify-content-center no-gutters">
           <div class="col-12 text-center">
-            <h2 class="text-uppercase">我们的微博</h2>
+            <h2 class="text-uppercase">我们的博客</h2>
           </div>
           <div class="col-xl-4 col-bordered col-lg-6 col-sm-10 col-12 fadeInLeft wow" data-wow-delay=".2s">
             <div class="post-classic">
