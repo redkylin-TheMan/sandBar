@@ -26,13 +26,13 @@ $comments_result = $conn->query($find_comments);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $row['title']; ?></title>
+    <link rel="stylesheet" href="css/article.css">
     <link rel="icon" href="images/sandI/logo-favicon-yellow.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,300i%7CRoboto:400,300i">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/article.css">
     <style>
         .content_image {
             /* position: relative; */
@@ -40,6 +40,110 @@ $comments_result = $conn->query($find_comments);
         .more-content {
             display: none;
         }
+        /* 文章容器样式 */
+ 
+.inside_container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* 文章标题样式 */
+.title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 文章创建时间样式 */
+.created_at {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* 文章内容样式 */
+.article-content {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 查看更多按钮样式 */
+button {
+    background-color: #ffb83b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+/* 评论区样式 */
+.comment-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.comment-section form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.comment-section form button {
+    background-color: #ffb83b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-section form button:hover {
+    background-color: #ffa500;
+}
+
+/* 评论样式 */
+.comment {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.comment p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.comment small {
+    font-size: 0.9em;
+    color: #777;
+}
     </style>
 </head>
 
