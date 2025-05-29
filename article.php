@@ -33,6 +33,8 @@ $comments_result = $conn->query($find_comments);
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
         .content_image {
             /* position: relative; */
@@ -126,11 +128,11 @@ button:hover {
 
 /* 评论样式 */
 .comment {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .comment p {
@@ -143,6 +145,19 @@ button:hover {
 .comment small {
     font-size: 0.9em;
     color: #777;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.vote-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.vote-icons i {
+    cursor: pointer;
 }
     </style>
 </head>
@@ -192,8 +207,14 @@ button:hover {
                 if ($comments_result->num_rows > 0) {
                     while ($comment = $comments_result->fetch_assoc()) {
                         echo '<div class="comment">';
+                        echo '<div class="comment-content">';
                         echo '<p>' . $comment['comment_text'] . '</p>';
                         echo '<small>' . $comment['created_at'] . '</small>';
+                        echo '</div>';
+                        echo '<div class="vote-icons">';
+                        echo '<i class="fa fa-thumbs-up" onclick="vote(this, \'up\')" data-voted="false"></i>';
+                        echo '<i class="fa fa-thumbs-down" onclick="vote(this, \'down\')" data-voted="false"></i>';
+                        echo '</div>';
                         echo '</div>';
                     }
                 } else {
@@ -215,6 +236,26 @@ button:hover {
         </script>
         <script src="js/core.min.js"></script>
         <script src="js/script.js"></script>
+        <script>
+            function vote(icon, type) {
+                const isVoted = icon.getAttribute('data-voted') === 'true';
+
+                if (isVoted) {
+                    // 取消投票
+                    icon.style.color = '';
+                    icon.setAttribute('data-voted', 'false');
+                } else {
+                    // 进行投票
+                    icon.style.color = '#ffb83b';
+                    icon.setAttribute('data-voted', 'true');
+
+                    // 取消另一个图标的投票状态
+                    const otherIcon = type === 'up' ? icon.nextElementSibling : icon.previousElementSibling;
+                    otherIcon.style.color = '';
+                    otherIcon.setAttribute('data-voted', 'false');
+                }
+            }
+        </script>
     </div>
 </body>
 
