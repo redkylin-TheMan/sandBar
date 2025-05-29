@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>带按钮的弹窗</title>
+  <script>
+    function showAlert() {
+      // 创建弹窗元素
+      var modal = document.createElement("div");
+      var content = document.createElement("div");
+      var link = document.createElement("a");
+      var closeBtn = document.createElement("button");
+
+      // 设置弹窗样式
+      modal.style.display = "block";
+      modal.style.position = "fixed";
+      modal.style.left = "50%";
+      modal.style.top = "50%";
+      modal.style.backgroundColor = "#fff";
+      modal.style.padding = "20px";
+      modal.style.border = "1px solid #ccc";
+      modal.style.zIndex = "1000";
+      modal.style.width = "300px";
+
+      // 设置内容样式
+      content.innerHTML = "<h2>这是一些信息</h2>";
+      link.href = "http://www.example.com";
+      link.innerHTML = "跳转到其他页面";
+      closeBtn.innerHTML = "取消";
+
+      // 添加按钮到内容
+      content.appendChild(link);
+      content.appendChild(closeBtn);
+
+      // 绑定点击事件
+      link.onclick = function () { window.location.href = link.href; };
+      closeBtn.onclick = function () { modal.style.display = "none"; };
+
+      // 将弹窗添加到 body
+      document.body.appendChild(modal);
+      content.appendChild(content);
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="showAlert()">显示弹窗</button>
+</body>
+
+</html>

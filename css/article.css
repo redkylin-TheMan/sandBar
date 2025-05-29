@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-item {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.blog-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.blog-content {
+    flex: 1;
+}
+
+.blog-title {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+}
+
+.blog-date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.blog-summary {
+    font-size: 1em;
+    line-height: 1.5;
+    max-height: 75px;
+    /* 限制为五行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.btn-primary {
+    background-color: #ffb83b;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 2rem;
+}

@@ -1,0 +1,156 @@
+/* 商品部分 */
+.goods .image .bigPic {
+  /* width: 20%; */
+  border: 1px solid rgb(213, 213, 213);
+}
+
+.goods .image {
+  width: 20vw;
+}
+
+.goods {
+  margin-top: 12px !important;
+}
+
+.line {
+  height: 3rem;
+  background-color: rgb(220, 220, 220);
+}
+
+.line .left {
+  background-color: #ffb83b;
+  line-height: 3rem;
+  height: 3rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+
+/* 商品部分 */
+
+/* 商品详情 */
+
+.buy-summary {
+  background-color: rgb(230, 230, 230);
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.buy-summary .left {
+  padding: 0;
+}
+
+.buy-summary .right {
+  padding: 0;
+}
+
+.goods p {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  height: 1rem;
+
+  /* text-align: center; */
+}
+
+.goods .price {
+  font-size: 1.2rem;
+}
+
+
+
+.goods p:hover {
+  color: #383838;
+}
+
+.meail input {
+  font-size: 0.9rem;
+}
+
+.meail {
+  margin-top: 0 !important;
+}
+
+.meail .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods .discount .leftS {
+  height: 19px;
+  width: 2px;
+  position: absolute;
+  background: url("../images/icon/quan-arr.gif");
+  top: 27px;
+}
+
+
+.goods .discount .rightS {
+  height: 18px;
+  width: 2px;
+  top: 28px;
+  left: 100px;
+  position: absolute;
+  background: url("../images/icon/quan-arr.gif");
+}
+
+.goods .discount p {
+  margin: 2px;
+  padding-left: 3px;
+  background-color: #ffdedf;
+  width: 100px;
+  font-size: 0.8rem;
+  color: #fc3d49;
+  border-top: 1px solid #fc3d49;
+  border-bottom: 1px solid #fc3d49;
+  height: 1.2rem;
+}
+
+
+.goods .right>div {
+  margin-top: 11px;
+}
+
+.goods .meail button {
+  position: relative;
+  border: none;
+  background-color: #ffb83b;
+  font-size: large;
+  font-weight: bolder;
+  color: white;
+  position: absolute;
+  right: 15px;
+  bottom: -30px;
+  height: 200%;
+  width: 30%;
+  border-radius: 5px;
+  height: 20%;
+  cursor: pointer;
+}
+
+.goods .meail button:hover {
+  cursor: pointer;
+}
+
+.buy_now {
+  right: 200px !important;
+  background-color: #fc3d49 !important;
+}
+
+.buy_now:hover {
+  background-color: #e62c39 !important;
+}
+
+.buy_later:hover {
+  background-color: #e8a532 !important;
+}
+
+
+
+/* 商品详情 */
+
+/* 右侧商品推荐 */
+
+/* 右侧商品推荐 */

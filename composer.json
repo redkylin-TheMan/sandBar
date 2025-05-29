@@ -1,0 +1,6 @@
+{
+  "require": {
+    "alibabacloud/sdk": "^1.8",
+    "twig/twig": "^3.0"
+  }
+}

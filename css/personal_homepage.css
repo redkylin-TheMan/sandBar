@@ -1,0 +1,221 @@
+@media screen and (max-width: 1200px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    max-width: 100%;
+    flex-grow: 1;
+  }
+
+  .right .product-information {
+    display: none;
+  }
+
+  .right .shop-item-image {
+    max-width: 35%;
+  }
+
+  .right .shop-item-price {
+    text-align: center;
+    font-size: 1rem;
+
+  }
+
+  .right .title-left {
+    font-size: small;
+  }
+}
+
+button {
+  border: none;
+  background-color: rgb(249, 249, 249);
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #c8c8c8;
+}
+
+.left {
+  height: auto;
+  background-color: rgb(243, 241, 241);
+}
+
+
+
+.left .information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.left .information .avatar {
+  height: 170px;
+  width: 170px;
+}
+
+.right {
+  background-color: rgb(250, 250, 250);
+}
+
+.big-box {
+  margin: 0 auto;
+}
+
+.right .welcomeTime {
+  height: 25vh;
+  width: 100%;
+  background-color: white;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background: url(/images/sandI/user-default-time-background.png);
+}
+
+.right .welcomeTime p {
+  font-size: 1.6rem;
+}
+
+.line>div {
+  height: 7vh;
+  margin-top: 30px;
+}
+
+.title-left {
+  background-color: #ffb83b;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-right {
+  background-color: #dcdcdc;
+}
+
+
+
+.shop-item {
+  margin-top: 10px !important;
+  height: 10rem;
+  padding: 10px;
+  background-color: #ffb83b;
+  border-radius: 0 0 30px 0;
+}
+
+.shop-item-image {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.shop-item-price {
+  color: red;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem;
+}
+
+.right .product-information .information {
+  overflow: hidden;
+  height: 100%;
+}
+
+.shop-item>* {
+  border: 1px solid rgb(202, 202, 202);
+}
+
+
+
+.move .number {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 2rem 0;
+}
+
+.move .number .border-box {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.move .number span {
+  text-align: center;
+  width: 3rem;
+  color: white;
+  display: inline-block;
+}
+
+.move .number button {
+  width: 2rem;
+  color: #d6982d;
+}
+
+.drop-item {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.drop-item button {
+  font-weight: bolder;
+  color: rgb(65, 65, 65);
+}
+
+.move .number input {
+  /* align-items: center; */
+  text-align: center;
+}
+
+.move .number input::-webkit-outer-spin-button,
+.move .number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.logout {
+  border: none;
+  background-color: #ffb83b;
+  color: white;
+  position: relative;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.total-price {
+  /* background-color: #ffb83b; */
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.total-price button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffb83b;
+  color: white;
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+}
+
+.total-price button:hover {
+  background-color: #d6982d;
+}
+
+.total-price p {
+  text-align: right;
+}
+
+.total-price .price {
+  color: red;
+  font-size: 2rem;
+}

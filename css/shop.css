@@ -1,0 +1,282 @@
+/* 字体规划 */
+/* asdasda */
+@font-face {
+  font-family: 'yuanshiren';
+  src: url('../fonts/AaFengKuangYuanShiRen-2.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .search {
+    width: 80vw !important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .right .goods-item {
+    width: 42% !important;
+    height: 23rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {
+  .card-body {
+    display: none;
+  }
+
+  .right .goods-item {
+    width: 42% !important;
+    height: 8rem !important;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .search {
+    width: 80vw !important;
+    margin: 0;
+  }
+
+
+}
+
+/* body {
+  font-family: '原始人', yuan;
+} */
+
+/* 字体规划 */
+
+/* 顶部搜索栏 */
+
+.search {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+
+.search .icon {
+  font-size: 200%;
+  color: #ffb83b;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.search .button {
+  font-family: 'yuanshiren';
+  margin: 0;
+  margin-left: 1vw;
+  background-color: #ffb83b;
+  border: #ffb83b;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  border: 3px #ffb83b solid;
+}
+
+.search .button:hover {
+  background-color: white;
+  color: #ffb83b;
+}
+
+
+.search input {
+  border: 1px solid #ffb83b;
+  border-radius: 5px;
+}
+
+.search input:focus {
+  border: solid 2px #ffb83b;
+  /* transition: 1s all; */
+}
+
+/* 顶部搜索栏 */
+
+/* 左侧筛选栏 */
+
+.filter-container {
+  font-size: 0.8rem;
+  position: fixed;
+
+}
+
+.filter-container input {
+  border: 0;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.filter-container select {
+  font-size: 0.8rem;
+}
+
+.filter-container {
+  /* width: 30%; */
+  /* 设置筛选区域宽度为屏幕的30% */
+  /* height: 100vh; */
+  /* 设置高度为视口高度 */
+  /* float: left; */
+  /* 使筛选区域浮动到左侧 */
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  /* 如果内容超出高度，允许滚动 */
+}
+
+#filterForm select {
+  border: 0;
+  background-color: #ffb83b;
+  border-radius: 5px;
+  width: 80%;
+  color: white;
+}
+
+#filterForm select option:hover {
+  color: black;
+  background-color: white;
+}
+
+.filter-item {
+  margin-bottom: 10px;
+}
+
+
+
+.filter-item label {
+  margin-right: 10px;
+  display: block;
+  /* 使标签和输入框/选择框在不同行显示 */
+}
+
+.products-container {
+  margin-left: 30%;
+  /* 使商品列表区域与筛选区域对齐 */
+  padding: 20px;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#filterForm button {
+  background-color: #ffb83b;
+  border: 0;
+  color: white;
+  border: 3px solid #ffb83b;
+}
+
+#filterForm button:hover {
+  background-color: white;
+  color: #ffb83b;
+}
+
+.filter-item input {
+  font-size: 0.8rem;
+}
+
+
+
+/* 左侧筛选栏 */
+
+/* 右侧商品栏 */
+.right .goods-item {
+  width: 22%;
+  height: 27rem;
+  background-color: #ffb83b;
+  margin: 12px;
+  transition: all 0.2s;
+  color: black;
+}
+
+.price {
+  color: red;
+
+}
+
+.goods {
+  margin-top: 2rem;
+  border: 2px solid #ffb83b;
+  background-color: #ffb73b18;
+  padding: 2px;
+}
+
+.right {
+  margin-left: 0;
+}
+
+.right .goods-item:hover {
+  box-shadow: #5f5f5f 5px 5px 14px 0;
+  transition: all 0.2s;
+}
+
+.right .card {
+  border: none;
+}
+
+.right .card .card-text {
+  font-size: 0.7rem;
+  /* white-space: wrap; */
+  height: 2.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.right .card *:hover {
+  color: #5f5f5f;
+}
+
+.right .card .price:hover {
+  color: red;
+}
+
+.right .card .brand {
+  font-size: 0.6rem;
+}
+
+.right .card .brand img {
+  height: 0.8rem;
+  /* padding-bottom: 1px; */
+}
+
+.goods a {
+  display: inline-block;
+}
+
+.goods * {
+  transition: all 0.2s;
+}
+
+.goods *:hover {
+  transition: all 0.2s;
+}
+
+.goods p:hover {
+  color: white;
+}
+
+h5 {
+  height: 2rem;
+}
+
+.goods_title {
+  color: white;
+}
+
+
+
+/* 右侧商品栏 */
+
+.nothing_img {
+  margin: 0 auto;
+}
