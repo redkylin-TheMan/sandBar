@@ -34,6 +34,34 @@ session_start();
       color: white;
       font-weight: bolder
     }
+
+    /* 新增推荐商品区域样式 */
+    .recommended-products {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .recommended-products .product {
+      width: 22%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .recommended-products .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .recommended-products .product .product-name {
+      padding: 0.5rem;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    
   </style>
 </head>
 
@@ -41,6 +69,7 @@ session_start();
   <?php
   include 'php/products_one.php'
     ?>
+
   <!-- <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
         src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
         alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
@@ -116,10 +145,6 @@ session_start();
           </div>
           <!-- 配送地点 -->
           <div class="meail row">
-            <div class="left col-2">
-              <p>配送至：</p>
-            </div>
-            <input type="text" id="location" placeholder="请输入地址">
             <?
             echo '<button class="buy_now" onclick="buy(' . $row['product_id'] . ')">立即购买</button>';
             echo '<button class="buy_later" onclick="addToCar(' . $row['product_id'] . ')">加入购物车</button>';
@@ -130,6 +155,11 @@ session_start();
         <!-- 侧边推荐 -->
         <div class="other-goods col-2">
         </div>
+      </div>
+
+      <!-- 推荐商品区域 -->
+      <div class="recommended-products">
+        <?php include 'php/products_other.php'; ?>
       </div>
 
       <!-- 页脚部分 -->

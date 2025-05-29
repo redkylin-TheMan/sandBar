@@ -13,22 +13,22 @@ for ($i = 0; $i < 4; $i++) {
   $random_array[$i] = rand(1, 44);
 }
 
-
-
 if ($product_other_result->num_rows > 0) {
+  $count = 0;
   while ($product_other_row = $product_other_result->fetch_assoc()) {
-    $i = 0;
-    if ($random_array[$i] == $product_other_row['product_id']) {
-      echo '    <div class="col other">';
-      echo '    <img src="images/goods/goods (1).jpg" alt="">';
-      echo '    <div class="word BoxInsideCenter">袜子</div>';
-      echo '  </div>';
-      $i++;
-      echo $product_other_row['product_id'];
-      echo $product_other_row['product_name'];
+    if (in_array($product_other_row['product_id'], $random_array)) {
+      echo '<div class="product">';
+      echo '<img src="images/goods/' . $product_other_row['image_url'] . '" alt="">';
+      echo '<div class="product-name">' . $product_other_row['product_name'] . '</div>';
+      echo '</div>';
+      $count++;
+      if ($count >= 4) {
+        break;
+      }
     }
   }
-} else
+} else {
   echo '数据没内容';
+}
 
 ?>
