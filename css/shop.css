@@ -54,10 +54,13 @@
 /* 顶部搜索栏 */
 
 .search {
-  width: 50vw;
-  margin: 0 auto;
+  width: 70%;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
-
 
 .search .icon {
   font-size: 200%;
@@ -69,30 +72,29 @@
 
 .search .button {
   font-family: 'yuanshiren';
-  margin: 0;
-  margin-left: 1vw;
   background-color: #ffb83b;
-  border: #ffb83b;
+  border: none;
   font-size: 1rem;
   color: white;
   border-radius: 5px;
-  border: 3px #ffb83b solid;
+  padding: 10px 20px;
 }
 
 .search .button:hover {
-  background-color: white;
-  color: #ffb83b;
+  background-color: #e8a532;
 }
 
 
 .search input {
-  border: 1px solid #ffb83b;
+  border: none;
   border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 .search input:focus {
-  border: solid 2px #ffb83b;
-  /* transition: 1s all; */
+  outline: none;
+  box-shadow: 0 0 5px #ffb83b;
 }
 
 /* 顶部搜索栏 */
@@ -190,13 +192,30 @@
 
 /* 右侧商品栏 */
 .right .goods-item {
-  width: 22%;
-  height: 27rem;
-  background-color: #ffb83b;
-  margin: 12px;
-  transition: all 0.2s;
+  width: 20%;
+  height: auto;
+  background-color: white;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   color: black;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+
 }
+
+.right .goods-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+
+}
+
+.right .goods-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 .price {
   color: red;
@@ -214,10 +233,6 @@
   margin-left: 0;
 }
 
-.right .goods-item:hover {
-  box-shadow: #5f5f5f 5px 5px 14px 0;
-  transition: all 0.2s;
-}
 
 .right .card {
   border: none;
@@ -279,4 +294,39 @@ h5 {
 
 .nothing_img {
   margin: 0 auto;
+}
+
+.right .goods-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.right .card-body {
+  padding: 15px;
+}
+
+.right .card-title.price {
+  color: #e4393c;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.right .card-title.goods_title {
+  font-size: 1rem;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 10px;
+}
+
+.right .card-text {
+  font-size: 0.8rem;
+  height: auto;
+  overflow: visible;
+  color: #666;
+}
+
+.right .brand {
+  font-size: 0.7rem;
+  color: #999;
 }

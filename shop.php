@@ -13,25 +13,15 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/shop.css">
   <style>
-    .card-title {
-      height: 1.5rem;
-      overflow: hidden;
-      font-size: 1rem;
-    }
-
-    .card-body .price {
-      color: #e4393c;
-      font-size: 1.5rem;
-      line-height: 1.5rem;
+    /* 可以在这里添加一些内联样式进行快速调整 */
+    body {
+      background-color: #f8f9fa; /* 浅灰色背景 */
     }
   </style>
 </head>
 
 <body>
-  <!-- <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
-        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
-        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
-  </div> -->
+  <!-- 预加载器 -->
   <div class="preloader">
     <div class="preloader-body">
       <div class="cssload-container">
@@ -41,51 +31,43 @@
     </div>
   </div>
 
-
-
+  <!-- 页面 -->
   <div class="page">
     <!-- 头部 -->
     <?php include 'moudle/header.php' ?>
-    <!-- 头部 -->
 
-
+    <!-- 主容器 -->
     <div class="container">
       <!-- 搜索栏 -->
       <form class="top text-center" action="shop_search.php" method="GET">
-        <div class="search row">
+        <div class="search row justify-content-center">
           <div class="icon">
-            <span class=" fa-search col-1"></span>
+            <span class="fa fa-search col-1"></span>
           </div>
-          <input type="text" name="keyword" class="col" placeholder="最近热搜：重岳同款跑步鞋" require>
-          <!-- <label for="></label> -->
+          <input type="text" name="keyword" class="col-6" placeholder="最近热搜：重岳同款跑步鞋" required>
           <button type="submit" class="col-2 button">搜索</button>
         </div>
       </form>
-      <!-- 搜索栏 -->
 
       <!-- 商品栏 -->
       <div class="goods container">
-
-        <div class="right container row">
-
+        <div class="right container row justify-content-center">
           <!-- 商品卡片 -->
-
           <!-- 用于输出所有的商品 -->
           <?php include 'php/products.php' ?>
-
           <!-- 商品卡片 -->
         </div>
-        <!-- 商品栏 -->
       </div>
     </div>
+
+    <!-- 页脚 -->
+    <?php include 'moudle/footer.php' ?>
   </div>
 
-
-  <?php include 'moudle/footer.php' ?>
-
-
+  <!-- 全局消息提示 -->
   <div class="snackbars" id="form-output-global"></div>
 
+  <!-- 脚本 -->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
 </body>
