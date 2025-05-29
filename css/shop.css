@@ -235,6 +235,7 @@
 
 
 .right .card {
+  background: #ffb83b;
   border: none;
 }
 
@@ -256,11 +257,13 @@
 }
 
 .right .card .brand {
-  font-size: 0.6rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 .right .card .brand img {
-  height: 0.8rem;
+  width: 20px;
   /* padding-bottom: 1px; */
 }
 

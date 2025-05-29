@@ -146,9 +146,14 @@
 }
 
 .buy_now {
-    right: 200px !important;
+    margin: 0 30px 0 30px;
     background-color: #fc3d49 !important;
 }
+
+.buy-summary .right>* {
+    height: 1.7rem;
+}
+
 
 .buy_now:hover {
     background-color: #e62c39 !important;
