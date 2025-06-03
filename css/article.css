@@ -1,94 +1,149 @@
 /* 文章容器样式 */
-
 .inside_container {
     background-color: #fff;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.inside_container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* 文章标题样式 */
 .title {
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #ffb83b, #ff9500);
+    border-radius: 3px;
 }
 
 /* 文章创建时间样式 */
 .created_at {
     font-size: 0.9em;
     color: #777;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.created_at i {
+    margin-right: 8px;
+    color: #ffb83b;
 }
 
 /* 文章内容样式 */
 .article-content {
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #555;
+    margin-bottom: 30px;
 }
 
-/* 查看更多按钮样式 */
-button {
-    background-color: #ffb83b;
+.article-content p {
+    margin-bottom: 20px;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background: linear-gradient(45deg, #ffb83b, #ff9500);
     border: none;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 25px;
+    border-radius: 30px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:hover {
-    background-color: #ffa500;
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ff9500, #ff7b00);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 /* 评论区样式 */
 .comment-section {
     background-color: #f9f9f9;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
 }
 
 .comment-section h3 {
     font-size: 1.8em;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.comment-section h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #ffb83b, #ff9500);
+    border-radius: 3px;
 }
 
 .comment-section form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 20px;
     resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    transition: all 0.3s ease;
 }
 
-.comment-section form button {
-    background-color: #ffb83b;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.comment-section form button:hover {
-    background-color: #ffa500;
+.comment-section form textarea:focus {
+    border-color: #ffb83b;
+    box-shadow: 0 0 0 3px rgba(255, 184, 59, 0.2);
+    outline: none;
 }
 
 /* 评论样式 */
 .comment {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
+    position: relative;
+}
+
+.comment:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #ffb83b, #ff9500);
+    border-radius: 4px 0 0 4px;
 }
 
 .comment p {
@@ -99,6 +154,28 @@ button:hover {
 }
 
 .comment small {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #777;
+    display: flex;
+    align-items: center;
+}
+
+.comment small i {
+    margin-right: 5px;
+    color: #ffb83b;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .inside_container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .comment-section {
+        padding: 20px;
+    }
 }

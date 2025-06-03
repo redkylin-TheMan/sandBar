@@ -44,7 +44,7 @@
           <div class="icon">
             <span class="fa fa-search col-1"></span>
           </div>
-          <input type="text" name="keyword" class="col-6" placeholder="最近热搜：重岳同款跑步鞋" required>
+          <input type="text" name="keyword" class="col-8" placeholder="最近热搜：重岳同款跑步鞋" required>
           <button type="submit" class="col-2 button">搜索</button>
         </div>
       </form>
