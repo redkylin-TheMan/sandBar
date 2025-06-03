@@ -128,7 +128,27 @@
             }
         }
 
-        
+        /* 固定按钮样式 */
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background: linear-gradient(45deg, #ffb83b, #ff9500);
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .fixed-button:hover {
+            background: linear-gradient(45deg, #ff9500, #ff7b00);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.5);
+        }
     </style>
 </head>
 
@@ -153,7 +173,7 @@
         include 'php/databases_link.php';
 
         // 查询数据库获取博客列表
-        $stmt = $conn->prepare("SELECT id, title, content, created_at, image_url FROM articles ORDER BY created_at DESC LIMIT 10");
+        $stmt = $conn->prepare("SELECT id, title, content, created_at, image_url FROM articles ORDER BY created_at LIMIT 20");
         $stmt->execute();
         $result = $stmt->get_result();
         ?>
@@ -176,6 +196,8 @@
                 <?php endwhile; ?>
             </div>
         </div>
+
+        <a href="upload_article.php" class="btn btn-primary fixed-button">上传你的精彩时刻</a>
 
         <?php
         // 包含底部模块
