@@ -1,9 +1,9 @@
 <?php
-
 session_start()
-?>
+
+  ?>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
 
 
     // 检查用户登录状态的函数
